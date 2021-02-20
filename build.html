@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <title>PC Building Simulator</title>
+    <meta name="google-signin-client_id" content="102506718746-lonodd36o6vjjgad24b23h7mks9tdjtm.apps.googleusercontent.com">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/e3a52e0f2a.js"></script>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-creative/5.1.8/css/creative.min.css"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+</head>
+
+<body>
+    <script async defer src="https://apis.google.com/js/platform.js"></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="build.html">Build</a>
+                </li>
+                <li><a href="#">Gallery</a>
+                </li>
+                <li><a href="about.html">About</a>
+                </li>
+                <li><a href="#">Contact</a>
+                </li>
+                <li><a href = "cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li>
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="position: relative;"></div>
+                </li>
+                <li>
+                    <div class="fb-login-button" data-size="medium" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="false" data-width=""></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="portfolio">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase" style = "color: white">PC Parts</h2>
+                    <h3 class="section-subheading head3">Our Exclusive Designs</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons">
+                    <a class="b2" id = "cpu" data-toggle="modal" href="">
+                        <p><span class="bg"></span><span class="base"></span><span class="text">CPU</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons" >
+                    <a class="b2" data-toggle="modal" id = "motherboard" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Motherboard</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons">
+                    <a class="b2" data-toggle="modal" id = "memory" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Memory</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons">
+                    <a class="b2" data-toggle="modal" id = "videocard" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Video Card</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons">
+                    <a class="b2" data-toggle="modal" id = "case" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Case</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons" >
+                    <a class="b2" data-toggle="modal" id = "powersupply" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Power Supply</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons" >
+                    <a class="b2" data-toggle="modal" id = "storage" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Storage</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons">
+                    <a class="b2" data-toggle="modal" id = "operatingsystem" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Operating System</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons" >
+                    <a class="b2" data-toggle="modal" id = "software" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Software</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 portfolio-item build_buttons">
+                    <a class="b2" data-toggle="modal" id = "monitor" href = "" >
+                        <p><span class="bg"></span><span class="base"></span><span class="text">Monitor</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id = "cpu_body"></div>
+
+    <!--         CPU Portfolio -->
+    <div class="portfolio-modal modal fade"  tabindex="-1" role="dialog" aria-hidden="true"></div>
+    <div class="portfolio-modal modal fade" id="pc_parts_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row" id = "parts">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = "scripts/search.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-creative/5.1.8/js/creative.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

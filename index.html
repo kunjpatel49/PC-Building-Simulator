@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <title>PC BUILDING SIMULATOR</title>
+    <meta name="google-signin-client_id" content="102506718746-lonodd36o6vjjgad24b23h7mks9tdjtm.apps.googleusercontent.com">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <script src="https://kit.fontawesome.com/e3a52e0f2a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+</head>
+
+<body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=2514352838689975" nonce="SvPT4j3k"></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="build.html">Build</a>
+                </li>
+                <li><a href="about.html">About</a>
+                </li>
+                <li><a href="#">Contact</a>
+                </li>
+                <li><a href="signin.html" >SignIn</a>
+                </li>
+                <li><a href = "cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+<!--                <li>-->
+<!--                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="position: relative;"></div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <div class="fb-login-button" data-size="medium" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="false" data-width=""></div>-->
+<!--                </li>-->
+            </ul>
+        </nav>
+    </header>
+    <div class="buttons">
+        <a class="b1" href="build.html">
+            <p><span class="bg"></span><span class="base"></span><span class="text">Start Build</span>
+            </p>
+        </a>
+        <a class="white b1" href="previous_build">
+            <p><span class="bg"></span><span class="base"></span><span class="text">Previous Build</span>
+            </p>
+        </a>
+        <a class="transparent b1" href="#">
+            <p><span class="bg"></span><span class="base"></span><span class="text b1">Our Suggestions</span>
+            </p>
+        </a>
+    </div>
+    <div class="previous_build">
+
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/talkToSql.js"></script>
+    <script src="scripts/googleSignInHandler.js"></script>
+
+    <div id="fb-root"></div>
+    <script src="scripts/fblogin.js"> checkLoginState()</script>
+
+</body>
+</html>
